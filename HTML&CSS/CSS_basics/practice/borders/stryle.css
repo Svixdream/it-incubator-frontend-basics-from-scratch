@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .elem {
+    height: 300px;
+    width: 300px;
+    background-color: #ffeb3b;
+    border-style: solid; стиль границы
+    border-color: aqua; цвет границы
+    border-width: 10px; толщина границы
+
+    border: 10px solid green;
+    border-top: 10px solid green;
+    border-right: 5px dashed brown;
+    border-bottom: 20px dotted rgb(23, 103, 252);
+    border-left: 15px solid;
+} */
+
+.elem {
+    width: 400px;
+    height: 400px;
+    background-color: rgb(218, 188, 21);
+/*     border-radius: 50px 50%; */
+/*     border-top-left-radius: 50px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 0; */
+
+/*     border-radius: 50px 70px 0 50%; */
+/*     border-radius: 50px / 100px; */
+border-radius: 30% 70% 53% 47% / 25% 34% 93% 32%;
+}

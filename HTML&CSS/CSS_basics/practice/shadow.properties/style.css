@@ -1,0 +1,26 @@
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: #ffeb3b;
+    box-shadow: 10px 20px 30px 20px rgb(26, 190, 67) inset,
+    20px 20px 20px 0px #226ec5,
+    -20px -30px 30px 0px rgb(180, 164, 16);
+}
+
+.svg {
+    width: 200px;
+    filter: drop-shadow(0px 0px 10px rgb(67, 165, 245)); /* позволяет вам применять к элементу такие графические эффекты, как размытие и смещение цвета */
+}
+
+.png {
+    width: 250px;
+    filter: drop-shadow(-50px -50px 10px rgb(67, 165, 245));
+}
+
+.text {
+    height: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-shadow: -20px -30px 50px rgb(67, 165, 245); /* тень для текста */
+}

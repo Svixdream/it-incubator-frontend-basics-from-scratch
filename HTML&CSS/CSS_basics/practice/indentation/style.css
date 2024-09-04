@@ -1,0 +1,32 @@
+/* .one_element,
+.two_element {
+    height: 300px;
+    width: 300px;
+    background-color: rgb(185, 191, 197);
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-bottom: 100px;
+    margin-left: 60px;  описание каждой стороны 
+    margin: 50px 20px 100px 60px; описание каждой стороны в одну строку
+    margin: 50px auto; отступы сверху и снизу 50px а по бокам auto(одинаковые отступы)
+}
+
+.one_element {
+    margin-bottom: 100px;
+}
+
+.two_element {
+    margin-top: 50px;
+} */
+
+.one_element {
+    height: 300px;
+    width: 300px;
+    background-color: rgb(185, 191, 197);
+/*     padding-top: 20px;
+    padding-right: 50px;
+    padding-bottom: 10px;
+    padding-left: 70px; */
+    padding: 20px 50px 10px 70px;
+/*     padding: 20px 0 50px; */
+}

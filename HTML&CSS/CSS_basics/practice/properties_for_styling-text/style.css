@@ -1,0 +1,29 @@
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: lightgrey;
+}
+
+.box {
+    width: 450px;
+    border: 5px solid white;
+    background-color: #ffeb3b;
+}
+
+p {
+    color: red;
+    text-align: left; /* выравнивание текста */
+    /* text-decoration: dotted line-through; линия располагающаяся в тексте  */
+    text-transform: none; /* изменяет регистр текста */
+/*     text-indent: 2rem; красная строка */
+    line-height: 2; /* высота строки */
+    word-spacing: normal; /* расстояние между строками */
+    letter-spacing: normal; /* межбуквенное расстояние */
+    /* word-break: break-all; перенос слов */
+    hyphens: manual; /* определяет, как переносить слова, когда текст переносится на несколько строк */
+}
+
+a {
+    text-decoration: none;
+}

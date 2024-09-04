@@ -1,0 +1,18 @@
+html {
+    font-size: 20px;
+} /* по умолчанию используется аразмер 10px */
+
+.body {
+    font-size: 10px;
+}
+
+.section {
+    height: 400px; /* у body изначально нет высоты */
+    font-size: 20px;
+}
+
+.square {
+    background-color: blueviolet;
+    width: 100vw;
+    height: 50vh;
+}

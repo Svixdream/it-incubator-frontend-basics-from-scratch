@@ -1,0 +1,55 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* color: red; */
+}
+
+ul {
+    list-style-type: disc;
+    list-style-image: linear-gradient(130deg, red, blue);
+    list-style-position: outside;
+    width: 400px;
+}
+
+/* ol li::marker { ::marker позволяет стилизовать маркеры списков, такие как точки в ненумерованных списках или номера в нумерованных списках 
+    color: red; изменение цвета маркера
+    content: counter(example); Использование значения счетчика как контент
+} */
+
+ol { /* Инициализация счетчика с именем 'example' */
+    counter-reset: example 0;
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+li { /* указываем на сколько шагов будет увеличиватсья счётчик в нашем случае на 2*/
+    counter-increment: example 2;
+    width: 350px;
+    background-color: rgb(70, 167, 241);
+    color: white;
+    padding: 20px;
+    position: relative;
+}
+
+li::after {
+    content: counter(example);
+    color: rgba(255, 255, 255, 0.404);
+    font-size: 6rem;
+    position: absolute;
+    right: 10px;
+    top: -20px;
+}
+
+p {
+    font-size: 16px;
+}

@@ -1,0 +1,31 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box; 
+    padding: 0;
+    margin: 0; 
+} /* *: Применяет стили ко всем элементам на странице.
+*::after и *::before: Применяет стили ко всем псевдоэлементам ::after и ::before для всех элементов. */
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box {
+    height: 200px;
+    width: 200px;
+    background-color: rgb(211, 211, 211);
+    border: 10px solid;
+    padding: 50px;
+}
+
+.box:first-child { /* Псевдокласс :first-child применяет стилевое оформление к первому дочернему элементу своего родителя. */
+    box-sizing: content-box; /* указанные ширина и высота элемента применяются только к его содержимому, без учета внутренних отступов (padding) и границ (border) */
+}
+
+.box:nth-child(2) { /* Выбирает каждый второй элемент среди любой группы соседних элементов */
+    box-sizing: border-box; /* все отступы, границы и содержимое элемента будут включены в указанные размеры ширины и высоты */
+}

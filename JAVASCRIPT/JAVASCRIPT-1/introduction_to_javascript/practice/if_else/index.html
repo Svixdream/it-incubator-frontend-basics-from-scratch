@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>if else</title>
+    <script>
+        const price = 100000; // хранит цену
+        const discount = 15; // размер скидки в процентах
+        const total = price - (price * discount / 100); // значение окончательной цены
+        console.log(total);
+
+        if(total >= 90000) { // если total будет больше или равно 90000 (false) то будет выполнено следующее условие
+            alert('Не берём')
+        } else if(total < 80000) { // если значение total будет меньше 80000 (false) то будет выполнено следующее условие
+            alert('Дайте два!')
+        } else { // во всех остальных случаях
+            alert('Берём один') // true
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

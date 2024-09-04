@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family: Muli;
+    src: local('Muli')
+    url(./assets/fonts/Double-Regular.eot?) format("eot");
+    src: url(./assets/fonts/Wolgadeutsche-Regular.woff2) format("woff2");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap; /* мнговенная отрисовка подменного шрифта и бесконечный период для замены на подгружаемый шрифт */
+}
+
+.system-font {
+    font-family:Arial, 'Helvetica' sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: oblique;
+    font-variant: small-caps;
+    line-height: 1.2;
+/*     font: 500 2rem/1.2px Arial, 'Helvetica' sans-serif;
+    font-stretch: ultra-condensed; */
+}
+
+.local-font {
+    font-family: Muli, sans-serif;
+    font-weight: bold;
+}
+
+.google-font {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 2;
+    font-size: 20px;
+}

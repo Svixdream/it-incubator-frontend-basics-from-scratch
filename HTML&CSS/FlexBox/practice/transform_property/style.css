@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(62, 62, 62);
+}
+
+.elem-transform {
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(211, 207, 255);
+    transition: 0.2s; /* задает плавный переход для изменений определенных свойств элемента в течение 0.2 секунды */
+}
+
+.elem-transform:hover {
+    /* transform: translate(-100px) skew(45deg) rotate(45deg); */
+    transform: matrix(1.5, 0, 1.5, 0.8, 50, 150);
+    transform-origin: center; /*   
+    skew отвечает за наклон сторон
+    
+    scale отвечает за масштаб элемента
+    transform-origin определяет точку, относительно которой будет выполняться трансформация элемента при использовании свойства transform
+
+    rotate позволяет поворачивать элементы на определенный угол
+
+    translate используется для перемещения элемента в пространстве */
+}
+
+.elem {
+    width: 350px;
+    height: 350px;
+    background-color: rgb(255, 45, 139);
+}

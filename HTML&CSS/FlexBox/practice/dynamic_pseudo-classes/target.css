@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 20px 0;
+    display: flex;
+}
+
+a {
+    margin: 20px;
+}
+
+section {
+    height: 80vh;
+    background-color: rgb(202, 224, 240);
+    margin: 5px 0;
+    padding: 50px;
+    display: none;
+}
+
+section:target {
+    background-color: crimson;
+    display: block;
+}
+
+/* section:target h3{ применяется к элементу <h3>, который находится внутри элемента <section>, когда эта секция является целью ссылки с якорем
+    font-size: 20px;
+    color:blue
+} */

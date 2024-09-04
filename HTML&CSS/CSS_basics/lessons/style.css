@@ -1,0 +1,152 @@
+* {
+    margin: 0; /* внешние отступы */
+    padding: 0; /* внутренние отступы */
+    box-sizing: border-box; /* границы и внутренние отступы теперь не увеличивают размер элементов */
+}
+
+body {
+    letter-spacing: 0.01em; /* межбуквенное расстояние */
+    font-family: "Rubik", sans-serif; /* sans-serif - fallback - любой шрифт без засечек */
+    font-weight: 400;
+}
+
+ul {
+    list-style: none; /* тип маркера */
+}
+
+section {
+    background: #eff2f9; /* цвет фона */
+    min-height: 100vh;
+}
+
+.card {
+    max-width: 1170px;
+    min-height: 800px;
+    padding: 60px 0 70px;
+    box-shadow: 20px 20px 40px 0 rgba(81, 91, 117, 0.25); /* тень, значения: сдвиг-x | сдвиг-y | размытие | растяжение | цвет */
+    background: #fff;
+    padding: 60px 0 70px; /* внутренние отступы - сверху | по бокам | снизу */
+}
+
+.product_img-block {
+    border-right: 2px solid rgba(20, 20, 20, 0.15); /* значения - толщина | тип | цвет  */
+    width: 540px;
+}
+
+.preview {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+}
+
+.selected {
+    box-shadow: 8px 8px 16px 0 rgba(81, 91, 117, 0.25);
+}
+
+.product_info-block {
+    padding: 0 60px; /* внутренний отступ, значения: верх+низ | лево+право */
+}
+
+.main_title {
+    font-family: "Montserrat", sans-serif; /* семейство шрифтов */
+    font-weight: 700; /* толщина (жирность) */
+    font-size: 38px; /* размер шрифта */
+    color: rgba(20, 20, 20, 0.9); /* цвет текста */
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    color: rgba(20, 20, 20, 0.4);
+}
+
+.text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: rgba(20, 20, 20, 0.7);
+    margin: 60px 0 65px;
+}
+
+.title {
+    font-family: "Lato", sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.4);
+    margin-bottom: 20px;
+}
+
+.colors {
+    margin-bottom: 65px;
+}
+
+.circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%; /* скругление углов чтобы сделать из квадрата круг */
+    background-color: #013c7d;
+    box-shadow: 2px 2px 4px 0 rgba(81, 91, 117, 0.25);
+}
+
+.blue {
+    background-color: #013c7d;;
+}
+
+.green {
+    background-color: #63cba7;
+}
+
+.red {
+    background-color: #d52f29;
+}
+
+.black {
+    background-color: #141414;
+}
+
+.yellow {
+    background-color: #f2c723;
+}
+
+li.selected {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    fill: #fff;
+    box-shadow: 2px 2px 6px 0 rgba(81, 91, 117, 0.25);
+    padding: 7px;
+}
+
+.quantity {
+    /* стили для текста выпадающего списка */
+    width: 80px; /* ширина выпадающего списка */
+    border: none; /* убираем границу */
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.8);
+
+    /* устанавливаем свою стрелку */
+    appearance: none; /* убираем стрелку, которую браузер отображает по умолчанию */
+    background-image: url(./assets/images/arrow.svg);
+    background-repeat: no-repeat;
+    background-position: right 0 top 50%;
+}
+
+.price {
+    font-weight: 500;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgba(20, 20, 20, 0.8);
+}
+
+.btn {
+    /* свойства для формы и текста внетри кнопки */
+    width: 510px;
+    height: 70px;
+    background: #141414;
+    font-weight: 500;
+    font-size: 18px;
+    color: #fff;
+    margin-top: 75px;
+}

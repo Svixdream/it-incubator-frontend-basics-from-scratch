@@ -1,0 +1,66 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    height: 10vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+a {
+    margin: 20px;
+    color: green;
+}
+
+a:visited { /* применяется после посещения ссылки пользователем */
+    color: red;
+}
+
+button {
+    min-width: 100px;
+    color: white;
+    background-color: rgb(102, 159, 244);
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+button:hover { /* срабатывает, когда пользователь наводит на элемент мышью, но не обязательно активирует его */
+    background-color: rgb(226, 212, 20);
+    cursor: pointer; /* свойство, которое изменяет вид курсора мыши, когда он находится над элементом. Значение pointer делает курсор похожим на руку с указующим пальцем */
+}
+
+button:active {
+    transform: translateY(2px); /* применяется к кнопкам (элементам <button>) в момент их нажатия. Он сдвигает кнопку вниз на 2 пикселя по оси Y, создавая иллюзию, что кнопка "вдавливается". */
+    border: 2px solid black; /* появления обводки кнопки */
+}
+
+/* button:focus {
+    outline: 2px solid blue; применяется к кнопкам (элементам <button>) в момент, когда они находятся в фокусе. Это может происходить, когда пользователь кликает на кнопку или перемещается к ней с помощью клавиши Tab
+} */
+
+button:focus-visible {
+    outline: 2px solid blue;
+} /* при нажатом tab происходит обводка, но когда происходит нажатие на эту кнопку, то обводка не отображается */
+
+form {
+    width: 50%;
+    padding: 20px;
+    display: flex;
+    gap: 20px;
+    border: 1px solid silver;
+}
+
+form:focus-within {
+    background-color: aqua;
+} /* применяется к элементу <form>, когда любой его потомок находится в фокусе. Это полезно для выделения формы, когда один из ее полей (например, <input> или <textarea>) активен */
+
+input {
+    width: 50%;
+    padding: 8px;
+}

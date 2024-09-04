@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Adaptive images</title>
+</head>
+<body>
+    <div class="box"></div>
+<!--     <div class="wrap">
+
+        <div class="img-box">
+            <div class="img-wrap">
+                <img src="./img/cat.webp" alt="cat">
+            </div>
+        </div>
+        <div class="img-box">
+            <div class="img-wrap">
+                <img src="./img/dragon.webp" alt="dragon">
+            </div>
+        </div>
+        <div class="img-box">
+            <div class="img-wrap">
+                <img src="./img/pike.webp" alt="pike">
+            </div>
+        </div>
+        <div class="img-box">
+            <div class="img-wrap">
+                <img src="./img/deer.webp" alt="deer">
+            </div>
+        </div>
+        <div class="img-box">
+            <div class="img-wrap">
+                <img src="./img/shark.webp" alt="shark">
+            </div>
+        </div> -->
+
+<!--         <img src="./img/deer.webp" alt="deer">
+        <img src="./img/dragon.webp" alt="dragon">
+        <img src="./img/pike.webp" alt="pike">
+        <img src="./img/shark.webp" alt="shark">
+        <img src="./img/cat.webp" alt="cat">
+        <img src="./img/deer.webp" alt="deer">
+        <img src="./img/dragon.webp" alt="dragon">
+        <img src="./img/pike.webp" alt="pike">
+        <img src="./img/shark.webp" alt="shark"> -->
+    </div>
+
+    <picture> <!-- позволяет адаптивно загружать изображения, выбирая разные ресурсы в зависимости от условий, таких как размер экрана, плотность пикселей и другие. Этот элемент особенно полезен для улучшения производительности и обеспечения оптимального отображения изображений на различных устройствах -->
+        <source media="(min-width: 800px)" srcset="./img/shark.webp"> <!-- c помощью тега source я указываю какие картинки хочу использовать -->
+        <source media="(max-width: 799px)" srcset="./img/dragon.webp"> <!-- используется в теге <source> и в правилах CSS для указания условий, при которых определенный ресурс или стиль должен быть применен -->
+        <img src="./img/bear.png" alt=""> <!-- в случае если webP не поддерживается, будет использоваться данная картинка -->
+    </picture>
+
+</body>
+</html>
