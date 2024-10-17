@@ -49,7 +49,7 @@ while (deposit < 20000) {
 console.log(deposit, count);
  */
 
-const INITIAL_ENERGY = 10
+/* const INITIAL_ENERGY = 10
 const MIN_ENERGY_LEVEL = 0
 const LOW_ENERGY_THRESHOLD = 3 // THRESHOLD(англ.) - порог
 
@@ -68,5 +68,84 @@ while (energy >= MIN_ENERGY_LEVEL) { // Цикл while продолжает вы
     energy = energy - 1
 }
 
-console.log("Программа завершена. Робот отдыхает.")
+console.log("Программа завершена. Робот отдыхает.") */
 
+
+// ===================== Второй круг =====================
+
+const user_name = 'Vladimir'
+let age = 24
+age = 18
+console.log(age);
+
+{
+    const name = 'Vlad'
+    let age = 25
+    console.log(name, age);
+    console.log(user_name);
+}
+
+// ===================== if else
+
+if (age < 30) {
+    console.log('Молодой');
+} else {
+    console.log('Старый');
+}
+
+// ===================== while
+
+while (age < 30) {
+    console.log('Молодой');
+    age += 10
+}
+
+// =====================
+
+// 0 - stop
+// 3 - charge
+// > - work
+// step - -1
+
+const counter = document.querySelector('.counter')
+console.log(counter);
+
+
+let energy = 10
+
+counter.innerText = energy
+
+
+/* while (energy >= 0) {
+    if (energy === 0) {
+        console.log('Нет сил больше... Отдыхаем');
+        counter.style.backgroundColor = 'red'
+        break
+    } else  if (energy <= 3) {
+        console.log('Нужна подзарядка');
+        counter.style.backgroundColor = 'yellow'
+    } else {
+        console.log('Работаем');
+        counter.style.backgroundColor = 'green'
+    }
+    energy = --energy
+    counter.innerText = energy
+} */
+
+    const intervalId = setInterval(function () {
+    if (energy === 0) {
+        console.log('Нет сил больше... Отдыхаем');
+        counter.style.backgroundColor = 'red'
+    } else  if (energy <= 3) {
+        console.log('Нужна подзарядка');
+        counter.style.backgroundColor = 'yellow'
+    } else {
+        console.log('Работаем');
+        counter.style.backgroundColor = 'green'
+    }
+
+    if (energy > 0) {
+        energy--;
+    }
+    counter.innerText = energy
+}, 500)

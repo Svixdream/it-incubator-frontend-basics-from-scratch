@@ -1,5 +1,5 @@
-// ================ Методы ================
-/* const prices = [23, 26, 36, 46, 54, 59] // элементы в списках называются индексы
+/* // ================ Методы ================
+ const prices = [23, 26, 36, 46, 54, 59] // элементы в списках называются индексы
  const lastIndex = prices.length - 1 // узнаём последний элемент массива (59)
 console.log(prices[lastIndex]);
 
@@ -27,7 +27,7 @@ const index = prices.indexOf(1000) // используется для поиск
 console.log(prices.includes(100)); // который проверяет, содержит ли строка или массив определенный элемент в true или false
  
 const lastSpl = prices.splice(3, 3) // позволяет добавлять, удалять или заменять элементы в массиве
-console.log(prices); */
+console.log(prices); 
 
 
 
@@ -100,3 +100,147 @@ function removeElement(array, el) {
     return result
 }
 console.log(removeElement(myScores, 82));
+ */
+
+
+// ===================== Второй круг =====================
+
+/* 
+const array = [1, 2, 3, 4, 5, 6, 7]
+const strings = [ 'a', 'b', 'c']
+
+console.log(array.length);
+console.log(strings.length);
+
+// доступ к элементу
+
+console.log(array[3]);
+console.log(strings[3]);
+
+array[0] = 10
+console.log(array);
+
+array[7] = 17
+array[array.length] = 21
+console.log(array[array.length - 1]);
+console.log(array);
+
+const scores = [82, 75, 91, 85, 93, 88, 99, 100]
+
+// scores[scores.length] = 95
+const newLength = scores.push(95)
+console.log(newLength);
+console.log(scores);
+
+scores.length = scores.length - 1
+const lastEl = scores.pop()
+
+console.log(lastEl);
+
+const students = ['Bob', 'Alex', 'Donald', 'Donald']
+
+students.unshift('student', 32) // добавляет первый элемент массива
+console.log(students);
+
+students.shift() // удаляет первый элемент массива
+students.shift() // удаляет первый элемент массива
+students.shift() // удаляет первый элемент массива
+console.log(students);
+
+const result = students.indexOf('Alex')
+
+const resultEl = students.filter(st => st === 'Donald')
+console.log(resultEl); */
+
+// =================== Функция для расчета среднего балла ================
+
+const scores = [82, 75, 91, 85, 93, 88, 99, 100]
+
+// 1 вариант
+
+let sum = 0
+/* let index = 0
+
+while (index < scores.length) {
+    sum += scores[index]
+    index++
+}
+const average = sum / scores.length
+
+console.log(average); */
+
+
+// 2 вариант
+
+/* for (let i = 0; i < scores.length; i++) {
+    sum += scores[i];
+}
+const averageSum = sum / scores.length
+console.log(averageSum); */
+
+function calculateAverageScores (arrayScores) {
+    for (let i = 0; i < arrayScores.length; i++) {
+        sum += arrayScores[i];
+    }
+    const averageSum = sum / arrayScores.length
+    return averageSum
+}
+
+console.log(calculateAverageScores(scores));
+
+
+// ================= Функция для перевода баллов в другую шкалу ==================
+
+// 90 => A
+// 80 => B
+// 70 => C
+// 60 => D
+// 0 => F
+
+function classifyScores(arrayScores) {
+    const classifiedScores = []
+    let grade;
+    for (let i = 0; i < arrayScores.length; i++) {
+        const score = arrayScores[i];
+        if (score >= 90) {
+            grade = 'A'
+        } else if (score >= 80) {
+            grade = 'B'
+        } else if (score >= 70) {
+            grade = 'C'
+        } else if (score >= 60) {
+            grade = 'D'
+        } else {
+            grade = 'F'
+        }
+        classifiedScores.push(grade)
+    }
+    return classifiedScores
+}
+console.log(classifyScores(scores));
+
+// ================= Упражнения ==================
+
+// 1. Функция reverseArray
+
+function reverseArray (array) {
+    const result = []
+    for (let i = array.length - 1; i >= 0; i--) {
+        result[result.length] = array[i]
+    }
+    return result
+}
+console.log(reverseArray(scores));
+
+// 2. Функция removeElement
+
+function removeElement (array, el) {
+    const result = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] !== el) {
+            result.push(array[i]);
+        }
+    }
+    return result
+}
+console.log(removeElement(scores, 100));

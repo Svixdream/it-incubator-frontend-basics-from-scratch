@@ -1,4 +1,4 @@
-
+/* 
 
 let isWinner = false // есть ли победитель?
 let userChoise; // выбор юзера
@@ -15,9 +15,9 @@ while (count < 3) {
     document.write('<h2>Раунд ' + count + '</h2>');
 
     // ============ 1 способ ===========
-    /*         if (userChoise === 'камень' || userChoise === 'ножницы' || userChoise === 'бумага') {
-                computerChoise = words[randomNum] // содержит варианты ответа из words и использует случайные числа из randomNum
-                document.write(userChoise, computerChoise); */
+            // if (userChoise === 'камень' || userChoise === 'ножницы' || userChoise === 'бумага') {
+            //     computerChoise = words[randomNum] // содержит варианты ответа из words и использует случайные числа из randomNum
+            //     document.write(userChoise, computerChoise);
 
     while (isWinner === false) { // цикл продолжается пока isWinner === false
         userChoise = prompt('Введите \'камень\', \'ножницы\' или \'бумага\'.')
@@ -48,17 +48,17 @@ while (count < 3) {
                 alert('Ничья, давай ещё попытку!')
             }
             // ============ 1 способ ===========
-            /*  else if (
-                (userChoise === 'камень' && computerChoise === 'ножницы') ||
-                (userChoise === 'ножницы' && computerChoise === 'бумага') ||
-                (userChoise === 'бумага' && computerChoise === 'камень')
-            ) {
-                alert('Мы выиграли!!!') // наша победа!
-                isWinner = true
-            } else {
-                alert('Упс.... Ты проиграл....:(') // проигрыш
-                isWinner = true
-            } */
+            //  else if (
+            //     (userChoise === 'камень' && computerChoise === 'ножницы') ||
+            //     (userChoise === 'ножницы' && computerChoise === 'бумага') ||
+            //     (userChoise === 'бумага' && computerChoise === 'камень')
+            // ) {
+            //     alert('Мы выиграли!!!') // наша победа!
+            //     isWinner = true
+            // } else {
+            //     alert('Упс.... Ты проиграл....:(') // проигрыш
+            //     isWinner = true
+            // } 
             // ============ 2 способ ===========
             else {
                 const isUserWinner =
@@ -76,4 +76,54 @@ while (count < 3) {
     }
 }
 
-alert('Игра завершена!'); // Финальное сообщение после трёх раундов
+alert('Игра завершена!'); // Финальное сообщение после трёх раундов */
+
+
+
+// ===================== Второй круг =====================
+
+let userChoice;
+let computerChoice;
+let isWinner = false;
+let countWin = 3
+let countUserWin = 0
+let countComputerWin = 0
+const keyWords = ["камень", "ножницы", "бумага"]
+
+//
+while (countUserWin < countWin && countComputerWin < countWin) {
+    while (isWinner === false) {
+        userChoice = prompt(`Напиши ${keyWords[0]}, ${keyWords[1]}, или ${keyWords[2]}`)
+        userChoice = userChoice.toLocaleLowerCase() // приведение к нижнему регистру
+        if (userChoice === keyWords[0]
+            || userChoice === keyWords[1]
+            || userChoice === keyWords[2]) {
+
+            computerChoice = keyWords[Math.floor(Math.random() * 3)]
+            alert(`Компьютер выбрал: ${computerChoice}`)
+
+            if (userChoice === computerChoice) {
+                alert('Ничья!');
+            } else if (
+                (userChoice === keyWords[0] && computerChoice === keyWords[2]) ||
+                (userChoice === keyWords[1] && computerChoice === keyWords[0]) ||
+                (userChoice === keyWords[2] && computerChoice === keyWords[1])
+            ) {
+                alert('Компьютер выиграл!')
+                countComputerWin++;
+                isWinner = true
+            } else {
+                alert('Ты выиграл!')
+                countUserWin++;
+                isWinner = true
+            }
+        } else {
+            alert('Введите корректное значение');
+        }
+    }
+    isWinner = false;
+    console.log(` Текущий счёт: Пользователь ${countUserWin} : Компьютер ${countComputerWin}`);
+    
+}
+
+alert(` Текущий счёт: Пользователь ${countUserWin} : Компьютер ${countComputerWin}`)
